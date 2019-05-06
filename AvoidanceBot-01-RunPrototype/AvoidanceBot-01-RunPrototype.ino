@@ -4,8 +4,8 @@
 //   and functional. 
 // Some code samples are from the letscodeblacksburg.org project.
 
+// Setup FS90R Servos 
 #include <Servo.h>
-
 // FS90R 180 full speed forward, 0 full speed backwards, 90 stop
 // 135 is Clockwise
 // 45 is Counter Clockwise
@@ -22,7 +22,7 @@ Servo servoL;  // create servo object to control a servo
 Servo servoR;  // create servo object to control a servo
 
 void setup() {
-  // put your setup code here, to run once:
+  // Attach Servos
   servoL.attach(6);  // attaches the right servo on pin 6
   servoR.attach(4);  // attaches the left servo on pin 5
 }
