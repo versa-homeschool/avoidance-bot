@@ -2,6 +2,8 @@
 // Avoidance Bot 02 Add Sensors
 // This program adds sensors to your build. 
 // Some code samples are from the letscodeblacksburg.org project.
+// This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License
+// http://creativecommons.org/licenses/by-sa/4.0/ 
 
 // ***********************************************************
 // ******* Setup FS90R Servos ********************************
