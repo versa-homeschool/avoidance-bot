@@ -4,7 +4,9 @@
 //   and functional. 
 // Some code samples are from the letscodeblacksburg.org project.
 
-// Setup FS90R Servos 
+// ***********************************************************
+// ******* Setup FS90R Servos ********************************
+// ***********************************************************
 #include <Servo.h>
 // FS90R 180 full speed forward, 0 full speed backwards, 90 stop
 // 135 is Clockwise

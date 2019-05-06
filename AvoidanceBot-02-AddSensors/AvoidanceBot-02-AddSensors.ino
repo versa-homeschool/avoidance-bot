@@ -3,7 +3,9 @@
 // This program adds sensors to your build. 
 // Some code samples are from the letscodeblacksburg.org project.
 
-// Setup FS90R Servos 
+// ***********************************************************
+// ******* Setup FS90R Servos ********************************
+// ***********************************************************
 #include <Servo.h>
 // FS90R 180 full speed forward, 0 full speed backwards, 90 stop
 // 135 is Clockwise
@@ -36,7 +38,9 @@ int obstacleC = false;
 Servo servoL;  // create servo object to control a servo
 Servo servoR;  // create servo object to control a servo
 
-// Setup Sensors 
+// ***********************************************************
+// ******* Setup Sensor **************************************
+// ***********************************************************
 // https://www.makerguides.com/tutorials/hc-sr04-arduino/ 
 // This is set up to direct connect power and ground for the HC-SR04 ping sensor to be
 // on pins 10(5v) 11(trigger) 12(echo) 13(low/gnd)
@@ -59,7 +63,7 @@ void setup() {
   digitalWrite(gnd1Pin, LOW);     // the outter GND pin to hard GND (on most arduinos)
   pinMode(powrPin, OUTPUT);
   digitalWrite(powrPin, HIGH);  // try to power the module from pin
-  // SENSOR I/O PINS
+  // Sensor I/O Pins
   pinMode(pingPin, OUTPUT);
   digitalWrite(pingPin, LOW);
   pinMode(echoPin, OUTPUT);    // just to make sure
@@ -84,13 +88,11 @@ void loop() {
 
   dist = getdist();              // looks with hping sensor to measure distance to any objects
 
-
   //****** If object detected between 2-7 inches away (and the system is not paused), then run the slowDown() function.
   if ( (dist > 1 && dist < 8) && (paused == false) ) {
     slowed = false;
     slowDown();    //quickly slows down and sets state to "slowed = true"
   }
-
 
   //****** If Slowed (due to obstacle) in slowDown(), next scan L&R for obstacle position (L || R)
   if (slowed == true && paused == false) {
@@ -197,8 +199,6 @@ void backward(){
     servoL.write(forwardR);           // rotate R servo forward
     servoR.write(forwardL);           // rotate L servo forward
 }
-
-
 
 // ***********************************************************
 // ***** scanLR() *******************************************
@@ -308,7 +308,6 @@ void pauseNgo() {
     }
   }
   
-
   // Paused Loop & Unpausing Detection  
   dist = getdist();
   if (paused == true){
@@ -328,8 +327,6 @@ void pauseNgo() {
       waspaused = 1;
     }
   }
-  
-  
 }
 
 // ***********************************************************
