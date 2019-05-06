@@ -1,4 +1,7 @@
 // VERSA Homeschool 2019 
+// Avoidance Bot 01 Run Prototype
+// This program allows you to verify that your build and servos are correct 
+//   and functional. 
 // Some code samples are from the letscodeblacksburg.org project.
 
 #include <Servo.h>
